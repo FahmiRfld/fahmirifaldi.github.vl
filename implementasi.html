@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Greetings</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #e55d87, #5fc3e4);
+        }
+
+        .love-container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+
+        .heart {
+            width: 120px;
+            height: 108px;
+            background-color: #ffffff;
+            transform: rotate(-45deg);
+            animation: heartbeat 1s infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 108px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .heart::before {
+            top: -54px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 54px;
+        }
+
+        .love-symbol {
+            font-size: 4em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        .greeting {
+            font-size: 2em;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .signature {
+            font-size: 1.5em;
+            font-style: italic;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            animation: parallax 10s infinite;
+        }
+
+        .flowers-left,
+        .flowers-right {
+            position: fixed;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .flowers-left {
+            left: 0;
+        }
+
+        .flowers-right {
+            right: 0;
+        }
+
+        .flower {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url('Bunga.png');
+            background-size: cover;
+            animation: float 8s infinite alternate;
+            opacity: 0.8;
+        }
+
+        .flower:nth-child(2) {
+            width: 70px;
+            height: 70px;
+            animation-duration: 12s;
+        }
+
+        .flower:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            animation-duration: 10s;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes parallax {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(0, -500px);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax-bg" style="background-image: url('romantic-background.jpg');"></div>
+    <div class="flowers-left">
+        <div class="flower" style="top: 20%; left: 10%;"></div>
+        <div class="flower" style="top: 15%; left: 30%;"></div>
+        <div class="flower" style="top: 25%; left: 50%;"></div>
+    </div>
+    <div class="flowers-right">
+        <div class="flower" style="top: 18%; left: 70%;"></div>
+        <div class="flower" style="top: 22%; left: 90%;"></div>
+    </div>
+    <div class="love-container">
+        <div class="love-symbol">❤️</div>
+        <div class="heart"></div>
+        <div class="greeting">
+            <p>Heyyyoww bebb,</p>
+            <p>Happy Valentine's Day! 💖</p>
+            <p>Maaf belum bisa ngasih hadiah bunga beneran, jadinya bunga di coding aja ckckckck.</p>
+            <p>Ga kerasa tiba tiba 10 bulan wkwkwkwk, semoga cepet dapet kerja yah biar ga stress di rumah mulu hehe.</p>
+            <p>Bingung mau ngomong apa lagi, pokoknya bahagia terus dan jangan cupa coblos pak gemoy .</p>
+            <p>Selamat 315 hariii!!!!!! ga kerasa yah.</p>
+        </div>
+        <div class="signature">Si paling coding, [Manusia terganteng sedunia]</div>
+    </div>
+</body>
+</html>
+
+
+
+
+
